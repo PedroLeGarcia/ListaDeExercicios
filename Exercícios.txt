@@ -1,0 +1,138 @@
+1 - Faça um programa que solicite um número inteiro e exiba se ele é par ou ímpar.
+
+let numero = parseInt(prompt("Digite um número inteiro: "));
+
+if (numero % 2 === 0) {
+  console.log("O número é par.");
+} else {
+  console.log("O número é ímpar.");
+}
+
+
+2 - Faça um programa que solicite um número inteiro e exiba se ele é positivo, negativo ou zero.
+
+let numero = parseInt(prompt("Digite um número inteiro: "));
+
+if (numero > 0) {
+  console.log("O número é positivo.");
+} else if (numero < 0) {
+  console.log("O número é negativo.");
+} else {
+  console.log("O número é zero.");
+}
+
+
+3 - Faça um programa que solicite um número inteiro positivo e exiba a sequência de números de 1 até o número digitado.
+
+let numero = parseInt(prompt("Digite um número inteiro positivo: "));
+
+for (let i = 1; i <= numero; i++) {
+  console.log(i);
+}
+
+
+4 - Faça um programa que solicite um número inteiro e calcule o fatorial desse número.
+
+let numero = parseInt(prompt("Digite um número inteiro: "));
+let fatorial = 1;
+
+for (let i = 1; i <= numero; i++) {
+  fatorial *= i;
+}
+
+console.log(`O fatorial de ${numero} é ${fatorial}.`);
+
+
+5 - Escreva um programa que calcule o máximo divisor comum entre dois números.
+
+function mdc(a, b) {
+  if (b === 0) {
+    return a;
+  } else {
+    return mdc(b, a % b);
+  }
+}
+
+console.log(mdc(24, 36)); // imprime 12
+
+
+6 - Escreva um programa que imprima a sequência de Fibonacci até o enésimo termo.
+
+function fibonacci(n) {
+  let a = 0, b = 1;
+  for (let i = 0; i < n; i++) {
+    console.log(a);
+    let temp = a;
+    a = b;
+    b = temp + b;
+  }
+}
+
+fibonacci(10); // imprime os primeiros 10 termos da sequência
+
+
+7 - Escreva um programa que calcule a soma dos dígitos de um número.
+
+function somaDigitos(n) {
+  let soma = 0;
+  while (n !== 0) {
+    soma += n % 10;
+    n = Math.floor(n / 10);
+  }
+  return soma;
+}
+
+console.log(somaDigitos(123)); // imprime 6
+
+
+8 - Escreva um programa que imprima os números de 1 a 100, mas para múltiplos de três imprima "Luca" em vez do número e para múltiplos de cinco imprima "Poee". Para números que são múltiplos de ambos três e cinco, imprima "LucaPoee".
+
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("\LucaPoee");
+  } else if (i % 3 === 0) {
+    console.log("Luca");
+  } else if (i % 5 === 0) {
+    console.log("Poee");
+  } else {
+    console.log(i);
+  }
+}
+
+
+9 - Escreva um programa que verifique se um número é uma potência de 2.
+
+function isPotenciaDe2(n) {
+  if (n <= 0) {
+    return false;
+  }
+  while (n > 1) {
+    if (n % 2 !== 0) {
+      return false;
+    }
+    n /= 2;
+  }
+  return true;
+}
+
+console.log(isPotenciaDe2(16)); // imprime true
+
+
+10 - Escreva um programa que ordene uma lista de números em ordem crescente ou decrescente.
+
+function ordenar(lista, crescente = true) {
+  if (crescente) {
+    return lista.sort((a, b) => a - b);
+  } else {
+    return lista.sort((a, b) => b - a);
+  }
+}
+
+const numeros = [5, 2, 9, 1, 3];
+console.log(ordenar(numeros)); // imprime [1, 2, 3, 5, 9]
+console.log(ordenar(numeros, false)); // imprime [9, 5, 3, 2, 1]
+
+
+Obs: eu fiz boa parte desses exercícios de manhã no celular, eu tbm não entendi muito o que era pra fazer, mas espero que esteja certo. Obrigado, pela atenção!
+
+
